@@ -8,6 +8,7 @@ import { Gifting } from '@/components/sections/gifting';
 import { Rsvp } from '@/components/sections/rsvp';
 import { Footer } from '@/components/sections/footer';
 import { Separator } from '@/components/ui/separator';
+import { SharePhotos } from '@/components/sections/share-photos';
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
       <Gifting />
       <Separator className="my-8 bg-accent/50" />
       <Rsvp />
+      <Separator className="my-8 bg-accent/50" />
+      <SharePhotos />
       <Footer />
     </main>
   );
