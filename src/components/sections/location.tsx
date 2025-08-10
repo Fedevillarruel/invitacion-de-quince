@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
 
 const salonName = "Salón de Fiestas 'El Encanto'";
-const salonAddress = "Av. Siempre Viva 123, Springfield";
+const salonAddress = "Almirante Brown 239, Monte Grande, Buenos Aires";
 const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${salonName}, ${salonAddress}`)}`;
 
 const venueImages = [

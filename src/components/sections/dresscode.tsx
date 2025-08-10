@@ -21,7 +21,7 @@ export function DressCode() {
   return (
     <Section className="text-center">
       <h2 className="font-headline text-4xl md:text-5xl mb-4">Dress Code</h2>
-      <p className="text-lg text-muted-foreground mb-12">Elegante. Anímate a incluir un toque de plata en tu look para brillar conmigo.</p>
+      <p className="text-lg text-muted-foreground mb-12">Elegante Sport. Anímate a incluir un toque de plata en tu look para brillar conmigo.</p>
       <Carousel
         opts={{
           align: "start",
