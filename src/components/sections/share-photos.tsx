@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 
 export function SharePhotos() {
-  const driveUrl = "https://drive.google.com/drive/folders/1v2c9M3BBRKUqphnQMD6kD2aX99rwrhXo?usp=drive_link";
+  const driveUrl = "https://drive.google.com/drive/folders/1-0xte2VFv75oqX_GGJNhcE42SaTpgjqF";
 
   return (
     <Section className="text-center">
