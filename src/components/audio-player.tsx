@@ -11,18 +11,13 @@ interface AudioPlayerProps {
 export function AudioPlayer({ src }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
 
   // Function to toggle play/pause
   const togglePlayPause = () => {
-    if (!hasInteracted) {
-      setHasInteracted(true);
-    }
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        // We only try to play if the user has interacted
         audioRef.current.play().catch(error => {
           console.error("Audio playback failed:", error);
         });
@@ -30,30 +25,22 @@ export function AudioPlayer({ src }: AudioPlayerProps) {
     }
   };
 
-  // Effect to handle initial playback after user interaction
+  // Effect to handle audio state
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
     
-    const attemptPlay = () => {
-      audio.play().then(() => {
-        setIsPlaying(true);
-      }).catch(() => {
-        // If autoplay is blocked, we wait for user interaction.
-        setIsPlaying(false);
-      });
-    };
-
-    // Browsers often block autoplay until the user interacts with the page.
-    // We'll try to play, but handle the failure gracefully.
-    attemptPlay();
-
     const handlePlay = () => setIsPlaying(true);
     const handlePause = () => setIsPlaying(false);
 
     audio.addEventListener('play', handlePlay);
     audio.addEventListener('pause', handlePause);
     audio.addEventListener('ended', handlePause); // For loop behavior
+
+    // Attempt to play on mount, gracefully handling autoplay restrictions.
+    audio.play().catch(() => {
+        setIsPlaying(false);
+    });
 
     return () => {
       audio.removeEventListener('play', handlePlay);
