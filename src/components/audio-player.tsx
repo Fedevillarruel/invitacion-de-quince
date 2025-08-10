@@ -11,22 +11,25 @@ interface AudioPlayerProps {
 export function AudioPlayer({ src }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
 
   const togglePlayPause = () => {
+    if (!hasInteracted) {
+      setHasInteracted(true);
+    }
+    
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
         audioRef.current.play().catch(error => {
           console.error("Audio playback failed:", error);
-          // Optionally, show a toast to the user
         });
       }
       setIsPlaying(!isPlaying);
     }
   };
 
-  // This effect will update the isPlaying state if the audio is paused from outside (e.g. browser controls)
   useEffect(() => {
     const audioElement = audioRef.current;
     if (audioElement) {
@@ -36,12 +39,21 @@ export function AudioPlayer({ src }: AudioPlayerProps) {
       audioElement.addEventListener('play', handlePlay);
       audioElement.addEventListener('pause', handlePause);
 
+      // Attempt to play on interaction
+      if(hasInteracted) {
+        audioElement.play().catch(error => {
+           // This catch is important for browsers that might still block autoplay
+           console.error("Autoplay after interaction failed:", error);
+        });
+      }
+
       return () => {
         audioElement.removeEventListener('play', handlePlay);
         audioElement.removeEventListener('pause', handlePause);
       };
     }
-  }, []);
+  }, [hasInteracted]);
+
 
   return (
     <>
