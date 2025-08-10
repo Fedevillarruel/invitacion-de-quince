@@ -16,7 +16,7 @@ export function SharePhotos() {
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
         <div className="max-w-[250px]">
           <Image 
-            src="https://firebasestudio.b-cdn.net/proxy/github/content/projects/codec/apps/c8105d15-a740-410e-a4b5-0c153b6f932e/previews/pr-11/1723162788931.png" 
+            src="/cumple more xv.png" 
             alt="QR para compartir fotos"
             width={400}
             height={550}
