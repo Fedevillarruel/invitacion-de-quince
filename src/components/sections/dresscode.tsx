@@ -10,11 +10,10 @@ import {
 } from "@/components/ui/carousel";
 
 const outfits = [
-  { src: "https://placehold.co/400x600.png", hint: "elegant silver dress" },
-  { src: "https://placehold.co/400x600.png", hint: "formal suit silver" },
-  { src: "https://placehold.co/400x600.png", hint: "evening gown silver" },
-  { src: "https://placehold.co/400x600.png", hint: "cocktail dress silver" },
-  { src: "https://placehold.co/400x600.png", hint: "men elegant attire" },
+  { src: "/1.jpg", hint: "elegant dress silver" },
+  { src: "/2.jpg", hint: "elegant suit silver" },
+  { src: "/3.jpg", hint: "evening gown silver" },
+  { src: "/4.jpg", hint: "cocktail dress silver" },
 ];
 
 export function DressCode() {
