@@ -9,22 +9,20 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const womenOutfits = Array.from({ length: 6 }, (_, i) => ({
-  src: `/images/mujer/${i + 1}.jpg`,
-  hint: "elegant dress silver"
-}));
-
-const menOutfits = Array.from({ length: 6 }, (_, i) => ({
-  src: `/images/hombre/${i + 1}.jpg`,
-  hint: "elegant suit silver"
-}));
-
-// Interleave the outfits
-const outfits = [];
-for (let i = 0; i < 6; i++) {
-  outfits.push(womenOutfits[i]);
-  outfits.push(menOutfits[i]);
-}
+const outfits = [
+  { src: "/images/mujer/1.jpg", hint: "elegant dress silver" },
+  { src: "/images/hombre/1.jpg", hint: "elegant suit silver" },
+  { src: "/images/mujer/2.jpg", hint: "elegant dress silver" },
+  { src: "/images/hombre/2.jpg", hint: "elegant suit silver" },
+  { src: "/images/mujer/3.jpg", hint: "elegant dress silver" },
+  { src: "/images/hombre/3.jpg", hint: "elegant suit silver" },
+  { src: "/images/mujer/4.jpg", hint: "elegant dress silver" },
+  { src: "/images/hombre/4.jpg", hint: "elegant suit silver" },
+  { src: "/images/mujer/5.jpg", hint: "elegant dress silver" },
+  { src: "/images/hombre/5.jpg", hint: "elegant suit silver" },
+  { src: "/images/mujer/6.jpg", hint: "elegant dress silver" },
+  { src: "/images/hombre/6.jpg", hint: "elegant suit silver" },
+];
 
 
 export function DressCode() {
