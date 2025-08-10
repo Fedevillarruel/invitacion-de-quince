@@ -12,7 +12,7 @@ import { SharePhotos } from '@/components/sections/share-photos';
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Hero />
       <Countdown />
       <Invitation />
