@@ -21,7 +21,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body bg-background text-foreground antialiased">
-        <AudioPlayer src="https://firebasestudio.b-cdn.net/proxy/github/content/projects/codec/apps/c8105d15-a740-410e-a4b5-0c153b6f932e/previews/pr-13/white-night-party.mp3" />
+        <AudioPlayer src="/white-night-party.mp3" />
         {children}
         <Toaster />
       </body>
