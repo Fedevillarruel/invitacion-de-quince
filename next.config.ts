@@ -21,6 +21,12 @@ const nextConfig: NextConfig = {
         hostname: 'firebasestudio.b-cdn.net',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
