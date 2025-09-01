@@ -6,6 +6,18 @@ import { AudioPlayer } from '@/components/audio-player';
 export const metadata: Metadata = {
   title: "Mis 15s - Morena Blanco",
   description: "Te invito a celebrar mis XV años. Una noche para brillar.",
+  openGraph: {
+    title: "Mis 15s - Morena Blanco",
+    description: "Te invito a celebrar mis XV años. Una noche para brillar.",
+    url: "quincemore.info",
+    siteName: "Mis 15s - Morena Blanco",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mis 15s - Morena Blanco",
+    description: "Te invito a celebrar mis XV años. Una noche para brillar.",
+  },
 };
 
 export default function RootLayout({

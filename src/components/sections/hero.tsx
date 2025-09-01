@@ -2,7 +2,7 @@ import { ArrowDown, Sparkles, Heart, Star, Crown } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 flex items-center justify-center">
+    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 flex items-center justify-center py-8 md:py-0">
       {/* Animated background elements with silver tones */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-4 h-4 bg-gray-300/40 rounded-full animate-sparkle"></div>
