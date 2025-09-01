@@ -45,15 +45,15 @@ export function Countdown() {
 
     return (
       <div key={interval} className="flex flex-col items-center group">
-        <div className="glass-morphism rounded-3xl p-6 md:p-8 mb-4 border-2 border-gray-300/30 hover:border-gray-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <div className="glass-morphism rounded-2xl md:rounded-3xl p-3 md:p-8 mb-2 md:mb-4 border-2 border-gray-300/30 hover:border-gray-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
           <div className="flex flex-col items-center">
-            <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-gray-600 mb-3 animate-sparkle" />
-            <span className="font-headline text-4xl md:text-6xl lg:text-7xl text-gradient font-bold">
+            <IconComponent className="w-4 h-4 md:w-8 md:h-8 text-gray-600 mb-1 md:mb-3 animate-sparkle" />
+            <span className="font-headline text-2xl md:text-6xl lg:text-7xl text-gradient font-bold">
               {timeLeft[interval].toString().padStart(2, '0')}
             </span>
           </div>
         </div>
-        <span className="text-gray-600 uppercase text-sm md:text-base tracking-[0.2em] font-medium group-hover:text-gray-700 transition-colors">
+        <span className="text-gray-600 uppercase text-[8px] md:text-base tracking-[0.02em] md:tracking-[0.2em] font-medium group-hover:text-gray-700 transition-colors whitespace-nowrap">
           {interval}
         </span>
       </div>
@@ -87,7 +87,7 @@ export function Countdown() {
         </div>
 
         {/* Countdown display */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12 mb-12">
+        <div className="flex justify-center gap-1 md:gap-8 lg:gap-12 mb-12 overflow-x-auto px-2">
           {timerComponents.length ? timerComponents : (
             <div className="glass-morphism rounded-3xl px-12 py-8 border-2 border-gray-400/40">
               <div className="flex items-center gap-4">
