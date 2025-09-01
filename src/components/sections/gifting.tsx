@@ -115,36 +115,15 @@ export function Gifting() {
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="text-sm text-gray-700 mb-1 font-medium">ALIAS</p>
-                            <p className="font-mono text-lg font-bold text-gray-900">more.blanco.xv</p>
+                            <p className="font-mono text-lg font-bold text-gray-900">More.vsp08</p>
                           </div>
                           <Button
                             variant="ghost"
                             size="sm"
-                            onClick={() => copyToClipboard('more.blanco.xv', 'alias')}
+                            onClick={() => copyToClipboard('More.vsp08', 'alias')}
                             className="hover:bg-gray-200/50"
                           >
                             {copiedField === 'alias' ? (
-                              <Check className="h-4 w-4 text-green-600" />
-                            ) : (
-                              <Copy className="h-4 w-4 text-gray-700" />
-                            )}
-                          </Button>
-                        </div>
-                      </div>
-
-                      <div className="bg-white/80 rounded-xl p-4 border-2 border-gray-300/40">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <p className="text-sm text-gray-700 mb-1 font-medium">CBU</p>
-                            <p className="font-mono text-sm font-bold text-gray-900">XXXXXXXXXXXXXXXXX</p>
-                          </div>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={() => copyToClipboard('XXXXXXXXXXXXXXXXX', 'cbu')}
-                            className="hover:bg-gray-200/70"
-                          >
-                            {copiedField === 'cbu' ? (
                               <Check className="h-4 w-4 text-green-600" />
                             ) : (
                               <Copy className="h-4 w-4 text-gray-700" />
