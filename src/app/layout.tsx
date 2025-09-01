@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { AudioPlayer } from '@/components/audio-player';
 
 export const metadata: Metadata = {
-  title: "Morena's White Night",
+  title: "Mis 15s - Morena Blanco",
   description: "Te invito a celebrar mis XV años. Una noche para brillar.",
 };
 
